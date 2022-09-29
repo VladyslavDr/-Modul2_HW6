@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    public abstract class Book
+    public abstract class Book : IComparable
     {
         private string _name;
         private DateTime _time;
@@ -25,5 +25,17 @@ namespace Library
         public DateTime Time => _time;
         public int NumberOfPages => _numberOfPages;
         public Autor Autor => _autor;
+
+        public int CompareTo(object obj)
+        {
+            if (obj is Book book)
+            {
+                return _name.CompareTo(book.Name);
+            }
+            else
+            {
+                throw new ArgumentException("Некорректное значение параметра");
+            }
+        }
     }
 }

@@ -16,13 +16,18 @@ namespace Library
             _books = new Book[5];
         }
 
+        public void SortByName()
+        {
+            Array.Sort(_books);
+        }
+
         public int TotalNumberOfPages()
         {
             var counter = 0;
 
-            foreach (var book in _books)
+            for (int index = 0; index < _counter; index++)
             {
-                counter += book.NumberOfPages;
+                counter += _books[index].NumberOfPages;
             }
 
             return counter;
