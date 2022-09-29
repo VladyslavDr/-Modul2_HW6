@@ -8,7 +8,7 @@ namespace Library
 {
     public class Library
     {
-        private Library _instance;
+        private static Library _instance;
 
         private Library()
         {
@@ -66,7 +66,7 @@ namespace Library
 
         public Book[] Books { get; init; }
 
-        public Library GetInstance()
+        public static Library GetInstance()
         {
             if (_instance == null)
             {

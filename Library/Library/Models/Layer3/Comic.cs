@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    public abstract class Comic : Prose
+    public class Comic : Prose
     {
         public Comic(string name, DateTime time, int numberOfPages, Autor autor, LiteraryDirection direction, Genre genre, ComicType type)
             : base(name, time, numberOfPages, autor, direction, genre)

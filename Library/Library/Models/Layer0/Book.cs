@@ -15,6 +15,7 @@ namespace Library
 
         public Book(string name, DateTime time, int numberOfPages, Autor autor)
         {
+            _name = name;
             _time = time;
             _numberOfPages = numberOfPages;
             _autor = autor;
