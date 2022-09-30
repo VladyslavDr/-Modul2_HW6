@@ -24,11 +24,15 @@ namespace Library
             user1.Card.AddItem(library.Books[5]);
             user1.Card.AddItem(library.Books[3]);
             user1.Card.AddItem(library.Books[4]);
+            user1.Card.AddItem(library.Books[0]);
             user1.Card.ShowCustomerCard();
 
             Console.WriteLine("Sort by name:");
             user1.Card.SortByName();
             user1.Card.ShowCustomerCard();
+
+            Console.WriteLine("Show Колобок");
+            user1.Card.ShowItem("Колобок");
         }
     }
 }

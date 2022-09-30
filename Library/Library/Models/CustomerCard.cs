@@ -16,6 +16,11 @@ namespace Library
             _books = new Book[5];
         }
 
+        public void ShowItem(string name)
+        {
+            _books.NameSearch(name);
+        }
+
         public void SortByName()
         {
             Array.Sort(_books);
